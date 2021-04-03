@@ -1,0 +1,28 @@
+.theMovie{
+    position: relative;
+    bottom: 8cm;
+    width: 6cm;
+    height: 7cm;
+    border-left: 2px solid black;
+    border-right:  2px solid black ;
+    border-top:  2px solid black;
+    border-bottom:  2px solid black;
+}
+#movieImage{
+    width: 3cm;
+    height: 1cm;
+    border-left: 2px solid black;
+    border-right:  2px solid black ;
+    border-top:  2px solid black;
+    border-bottom:  2px solid black;
+}
+.table2{
+    position: relative;
+    bottom: 1cm;
+    width: 1cm;
+    height: 1cm;
+    border-left: 2px solid black;
+    border-right:  2px solid black ;
+    border-top:  2px solid black;
+    border-bottom:  2px solid black;
+}
