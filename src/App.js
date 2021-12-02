@@ -1,30 +1,28 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import React, { useState } from 'react';
-import {HashRouter as Router,Switch,Route,Link} from 'react-router-dom';
-// import {FacebookIcon, FacebookShareButton} from "react-share"
-import Movie from './Components/Movie.js'
-import SecQues from './Components/SecQues'
+import './App.css'
+import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import HomePage from "./Pages/Homepage";
+import Title from "./Pages/Title";
+import Menu from "./Pages/Menu";
+import Page1 from "./Pages/Page1";
+import Page2 from "./Pages/Page2";
 
 function App() {
-    return (
-        <div className="App">  
-           <div>
-           </div>  
-          
-           <Router> 
-             <Link to='/'> Homepage </Link>
-             <Link  to='/page'>page2</Link> 
-
-              <Switch>
-                 <Route exact path='/' component={()=>{return(<h1>homepage</h1>)}}/>
-                 <Route exact path='/page' component={()=>{return(<h1>page 2</h1>)}}/>
-             </Switch>         
-           </Router> 
-          
-        </div>
-      );
+  return (
+    <div className="App">
+      <Title />
+      <Router>
+        <Menu />
+        <Switch>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/Name-to-Flag-game" element={<Page1 game="Name-to-Flag-game" />} />
+          <Route exact path="/Flag-to-Name-game" element={<Page1 game="Flag-to-Name-game" />} />
+          <Route exact path="/Flag-to-Name-game/game" element={<Page2 game="Flag-to-Name-game" />} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
-export default App;
- 
 
+export default App;
