@@ -15,10 +15,10 @@ function App() {
       <Router>
         <Menu />
         <Switch>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/Name-to-Flag-game" element={<Page1 game="Name-to-Flag-game" />} />
-          <Route exact path="/Flag-to-Name-game" element={<Page1 game="Flag-to-Name-game" />} />
-          <Route exact path="/Flag-to-Name-game/game" element={<Page2 game="Flag-to-Name-game" />} />
+          <Route exact path="/" component={()=> <HomePage />} />
+          <Route exact path="/NTFgame" component={()=> <Page1 game="Name-to-Flag-game" />} />
+          <Route exact path="/FTNgame" component={()=> <Page1 game="Flag-to-Name-game" />} />
+          <Route exact path="/Flag-to-Name-game/game" component={()=> <Page2 game="Flag-to-Name-game" />} />
         </Switch>
       </Router>
     </div>
